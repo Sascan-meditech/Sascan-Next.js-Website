@@ -22,7 +22,7 @@ export default function OralScanPage() {
                   <div className="sp-hero__side">
                     <p className="sp-lead">OralScan is an optical imaging multimodal device for the early detection of (pre-) cancerous lesions of the oral cavity.</p>
                     <div className="sp-actions">
-                      <a href="#demo" data-demo="OralScan" className="btn btn--primary btn--hook">Request a demo</a>{" "}<Link href="/#contact" className="btn btn--secondary">Get a free Quote</Link>
+                      <a href="#demo" data-demo="OralScan" className="btn btn--primary btn--hook">Request a demo</a>{" "}<a href="#quote" data-quote="OralScan" className="btn btn--secondary">Get a free Quote</a>
                     </div>
                   </div>
                 </div>

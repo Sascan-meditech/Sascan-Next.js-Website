@@ -368,6 +368,26 @@ function setup(cleanups) {
       });
     });
 
+    /* ---------- Trust strip (home): numbers count up when they scroll into view ---------- */
+    document.querySelectorAll('.trust [data-count]').forEach((el) => {
+      const target = Number(el.dataset.count);
+      if (!el.dataset.count || !Number.isFinite(target)) return;
+      el.textContent = '0';
+      const io = new IntersectionObserver(([en]) => {
+        if (!en.isIntersecting) return;
+        io.disconnect();
+        const start = performance.now();
+        const dur = 1400;
+        const tick = (now) => {
+          const t = Math.min(1, (now - start) / dur);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))).toLocaleString('en-IN');
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }, { threshold: 0.4 });
+      io.observe(el);
+    });
+
     /* ---------- Testimonials loop (home): repeat the cards once so the row can glide endlessly ---------- */
     document.querySelectorAll('[data-quotes] .quotes__track').forEach((track) => {
       const cards = [...track.children].filter((c) => !c.hasAttribute('data-clone'));
