@@ -105,12 +105,12 @@ export default function Header({ active }) {
               </li>
             </ul>
             <div className="nav__mobile-actions">
-              <a href="#" className="btn btn--secondary">Login</a>{" "}<Link href="/#contact" className="btn btn--secondary">Contact us</Link>
+              <a href="#" className="btn btn--secondary">Login</a>{" "}<Link href="/contact" className="btn btn--secondary">Contact us</Link>
             </div>
           </nav>
 
           <div className="header__actions">
-            {" "}<a href="#" className="header__link">Login</a>{" "}<CartButton />{" "}<Link href="/#contact" className="btn btn--secondary header__cta">Contact us</Link>{" "}<button className="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+            {" "}<a href="#" className="header__link">Login</a>{" "}<CartButton />{" "}<Link href="/contact" className="btn btn--secondary header__cta">Contact us</Link>{" "}<button className="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
               <span></span><span></span><span></span>
             </button>
           </div>
