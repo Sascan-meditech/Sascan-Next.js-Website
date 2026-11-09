@@ -24,7 +24,7 @@ export default function Footer() {
             </div>
             <div className="footer__col">
               <h4 className="mono">Support</h4>
-              <ul><li><Link href="/#contact">Contact Us</Link></li><li><a href="#demo">Request a Demo</a></li><li><Link href="/faq">FAQ</Link></li><li><Link href="/#news">News &amp; Events</Link></li><li><a href="https://wa.me/919446697551" target="_blank" rel="noopener">Help &amp; WhatsApp Support</a></li></ul>
+              <ul><li><Link href="/contact">Contact Us</Link></li><li><a href="#demo">Request a Demo</a></li><li><Link href="/faq">FAQ</Link></li><li><Link href="/#news">News &amp; Events</Link></li><li><a href="https://wa.me/919446697551" target="_blank" rel="noopener">Help &amp; WhatsApp Support</a></li></ul>
             </div>
           </div>
           <div className="footer__bottom mono">

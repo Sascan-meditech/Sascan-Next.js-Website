@@ -152,47 +152,35 @@ export default function HomePage() {
 
           {/* ============ PRODUCTS ============ */}
           <section className="section section--rule" id="products">
-            <div className="container pl-wrap">
-              <div className="section__head pl-wrap__head reveal">
+            <div className="container">
+              <div className="section__head section__head--wide reveal">
                 <span className="label mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z" /><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" /></svg>Product lineup</span>
-                <h2>Screening Products Built For <span className="accent">Early Detection.</span></h2>
+                <h2 className="one-line">Screening Products Built For <span className="accent">Early Detection.</span></h2>
                 <p className="lead">From oral and cervical screening to clinical care — innovating medical technology for better healthcare.</p>
               </div>
 
-              <div className="pl-cards">
-                <article className="pl-card pl-card--oral reveal">
-                  <div className="pl-card__media"><img src="/assets/oralscan/oralscan-kit-laptop.webp" width="1200" height="1200" alt="OralScan kit with laptop running the OralScan software" loading="lazy" decoding="async" /></div>
-                  <div className="pl-card__body">
-                    <div className="pl-card__top">
-                      <div className="pl-card__meta"><span className="pl-card__index mono">01 / 02</span><span className="pl-card__rule" aria-hidden="true"></span><p className="pl-card__tag">Oral tissue screening</p></div>
-                      <h3 className="pl-card__name">OralScan</h3>
-                      <p className="pl-card__desc">Multispectral imaging for screening and early detection of potentially malignant lesions in oral tissue.</p>
-                    </div>
-                    <div className="pl-card__bottom">
-                      <dl className="pl-card__specs">
-                        <div><dt>Imaging</dt><dd>Multispectral</dd></div>
-                        <div><dt>Target</dt><dd>Oral tissue</dd></div>
-                      </dl>
-                      <Link href="/oralscan" className="pl-card__link" aria-label="Know more about OralScan">Know more</Link>
-                    </div>
-                  </div>
+              <div className="products">
+                <article className="product product--lg product--split reveal">
+                  <span className="product__media"><img src="/assets/oralscan/oralscan-kit-laptop.webp" width="1200" height="1200" alt="OralScan kit with laptop running the OralScan software" loading="lazy" decoding="async" /></span>
+                  <h3 className="product__name">OralScan</h3>
+                  <p className="product__tag">Oral tissue screening</p>
+                  <p className="product__desc">Multispectral imaging for screening and early detection of potentially malignant lesions in oral tissue.</p>
+                  <dl className="specs">
+                    <div><dt className="mono">Imaging</dt><dd>Multispectral</dd></div>
+                    <div><dt className="mono">Target</dt><dd>Oral tissue</dd></div>
+                  </dl>
+                  <Link href="/oralscan" className="btn btn--secondary product__link" aria-label="Know more about OralScan">Know more</Link>
                 </article>
-                <article className="pl-card pl-card--cervi reveal">
-                  <div className="pl-card__media"><img src="/assets/cerviscan/cerviscan-device.webp" width="1200" height="1200" alt="CerviScan imaging device with tablet on a tripod" loading="lazy" decoding="async" /></div>
-                  <div className="pl-card__body">
-                    <div className="pl-card__top">
-                      <div className="pl-card__meta"><span className="pl-card__index mono">02 / 02</span><span className="pl-card__rule" aria-hidden="true"></span><p className="pl-card__tag">Cervical tissue screening</p></div>
-                      <h3 className="pl-card__name">CerviScan</h3>
-                      <p className="pl-card__desc">Multispectral imaging for low-cost screening of cervical tissue.</p>
-                    </div>
-                    <div className="pl-card__bottom">
-                      <dl className="pl-card__specs">
-                        <div><dt>Imaging</dt><dd>Multispectral</dd></div>
-                        <div><dt>Target</dt><dd>Cervical tissue</dd></div>
-                      </dl>
-                      <Link href="/cerviscan" className="pl-card__link" aria-label="Know more about CerviScan">Know more</Link>
-                    </div>
-                  </div>
+                <article className="product product--lg product--split reveal">
+                  <span className="product__media"><img src="/assets/cerviscan/cerviscan-device.webp" width="1200" height="1200" alt="CerviScan imaging device with tablet on a tripod" loading="lazy" decoding="async" /></span>
+                  <h3 className="product__name">CerviScan</h3>
+                  <p className="product__tag">Cervical tissue screening</p>
+                  <p className="product__desc">Multispectral imaging for low-cost screening of cervical tissue.</p>
+                  <dl className="specs">
+                    <div><dt className="mono">Imaging</dt><dd>Multispectral</dd></div>
+                    <div><dt className="mono">Target</dt><dd>Cervical tissue</dd></div>
+                  </dl>
+                  <Link href="/cerviscan" className="btn btn--secondary product__link" aria-label="Know more about CerviScan">Know more</Link>
                 </article>
               </div>
             </div>
