@@ -18,10 +18,10 @@
   --grey-50: #F6F6F7;
   --white: #FFFFFF;
 
-  /* Typography (reference: IBM Plex Sans display, Geist UI/body) */
-  --font-display: var(--font-plex), var(--font-geist), sans-serif;
-  --font-body: var(--font-geist), var(--font-plex), sans-serif;
-  --font-mono: var(--font-geist), sans-serif;          /* labels use Geist caps, as in the reference */
+  /* Typography: IBM Plex Sans everywhere (headings, body, labels, buttons) */
+  --font-display: var(--font-plex), sans-serif;
+  --font-body: var(--font-plex), sans-serif;
+  --font-mono: var(--font-plex), sans-serif;           /* labels: Plex caps with wide tracking */
   --text-label: 13px;  --lh-label: 15.34px;  --ls-label: 0.14em;
   --text-xs: 12px;     --lh-xs: 14.4px;
   --text-sm: 16px;     --lh-sm: 22.4px;
@@ -103,7 +103,7 @@ h4 { font-weight: var(--weight-medium); }
 
 .container { width: var(--container); margin-inline: auto; }
 
-/* Label style — Geist 13px caps, wide tracking (nav, eyebrows, buttons, captions) */
+/* Label style — 13px caps, wide tracking (nav, eyebrows, buttons, captions) */
 .mono, .label-text {
   font-family: var(--font-body); font-weight: var(--weight-medium);
   font-size: var(--text-label); line-height: var(--lh-label);
@@ -562,7 +562,7 @@ h4 { font-weight: var(--weight-medium); }
 .quote__icon .ico { width: 28px; height: 28px; stroke-width: 1.4; }
 .quote blockquote { flex: 1; font-family: var(--font-display); font-size: var(--text-lead); line-height: var(--lh-lead); color: var(--fg); }
 .quote figcaption { display: flex; align-items: center; gap: var(--space-4); margin-top: auto; min-height: 84px; padding-top: var(--space-6); border-top: 1px solid var(--line); }
-.quote__avatar { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid color-mix(in srgb, var(--accent) 55%, transparent); }
+.quote__avatar { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
 .quote__who { display: grid; gap: var(--space-2); }
 .quote figcaption strong { font-family: var(--font-display); font-weight: var(--weight-medium); }
 .quote__who > span { color: var(--fg-2); font-weight: var(--weight-medium); font-size: var(--text-label); line-height: var(--lh-label); }
@@ -1602,10 +1602,10 @@ h4 { font-weight: var(--weight-medium); }
 .cl-gallery__nav:hover { background: var(--accent); color: #fff; }
 .cl-gallery__count { position: absolute; right: 14px; bottom: 14px; z-index: 2; padding: 4px 10px; border-radius: 999px; font-size: 11px; color: #fff; background: rgb(17 18 20 / .55); backdrop-filter: blur(6px); }
 .cl-thumbs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-5); }
-.cl-thumb { padding: 0; aspect-ratio: 1 / 1; border-radius: 12px; overflow: hidden; border: 2px solid transparent; background: var(--panel); cursor: pointer; opacity: .6; transition: opacity .25s ease, border-color .25s ease; }
+.cl-thumb { padding: 0; aspect-ratio: 1 / 1; border-radius: 12px; overflow: hidden; background: var(--panel); cursor: pointer; opacity: .6; transition: opacity .25s ease; }
 .cl-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .cl-thumb:hover { opacity: 1; }
-.cl-thumb.is-active { opacity: 1; border-color: var(--accent); }
+.cl-thumb.is-active { opacity: 1; }
 
 /* Buy box */
 .cl-buy__cat { font-size: 12px; letter-spacing: var(--ls-label); text-transform: uppercase; color: var(--accent); }
@@ -1676,7 +1676,7 @@ h4 { font-weight: var(--weight-medium); }
 .cl-related__head { margin-bottom: var(--space-7); text-align: center; }
 .cl-related__grid { list-style: none; margin: 0 auto; padding: 0; max-width: 760px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-6); }
 .cl-card { display: flex; flex-direction: column; height: 100%; border-radius: 18px; overflow: hidden; background: var(--panel); border: 1px solid var(--line); transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
-.cl-card:hover { transform: translateY(-5px); border-color: color-mix(in srgb, var(--accent) 40%, var(--line)); box-shadow: 0 22px 44px -28px color-mix(in srgb, var(--accent) 70%, transparent); }
+.cl-card:hover { transform: translateY(-5px); border-color: var(--line-strong); box-shadow: 0 22px 44px -30px rgb(5 8 12 / .35); }
 .cl-card__img { position: relative; aspect-ratio: 4 / 3; overflow: hidden; }
 .cl-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
 .cl-card:hover .cl-card__img img { transform: scale(1.05); }
