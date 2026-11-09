@@ -2340,3 +2340,20 @@ input:not([type="radio"]), select, textarea,
 .demo, .demo__panel, .demo__field input, .demo__field select, .demo__field textarea {
   border-radius: 0 !important;
 }
+
+/* ==========================================================================
+   Site-wide: one heading style for page titles and section headings,
+   matching the Careers "Work With Us" title (IBM Plex Sans Regular, max 40px).
+   The home hero title keeps its own larger size; small labels (department
+   names, order summary, INDIA, publication years) are left as they are.
+   ========================================================================== */
+main h1:not(.hero__title),
+.ab-hero__title, .sp-title, .jo-title, .shop-title, .ct-hero__title, .cl-buy__title, .pb-title, .tc-head__title,
+.section__head h2, .ab-sec__head h2, .cta__title, .sp-h2, .os-h2, .ss-h2, .ap-h2, .cl-h2, .pb-h2, .sp-end__title, .ss-cta__title {
+  font-family: var(--font-display) !important;
+  font-size: clamp(28px, 3vw, 40px) !important;
+  font-weight: var(--weight-regular) !important;
+  line-height: 1.1 !important;
+  letter-spacing: -0.02em !important;
+}
+.pb-h2--one { white-space: normal !important; } /* long heading may wrap at the larger size */
