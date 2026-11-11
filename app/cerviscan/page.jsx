@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { CheckCircle } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata = {
   title: "CerviScan — Cervical Cancer Screening Device | Sascan Meditech",
@@ -44,9 +45,9 @@ export default function CerviScanPage() {
               <div className="container">
                 <h2 className="sp-h2 sx-title reveal">Currently Under Clinical Validation</h2>
                 <ul className="sx-list sx-list--rows reveal">
-                    <li><span className="sx-check"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M8 12.5l2.7 2.7L16 9.8" /></svg></span><span>The pilot studies with the first prototype of CerviScan were conducted in 109 patients at the Kasturba Medical College, Manipal. A sensitivity of 100% and specificity of 93% was obtained in discriminating normal from abnormal (precancer and cancer) cervix in the studied population. The study results are published in the Artificial Intelligence in Health journal <a href="https://accscience.com/journal/AIH/2/3/10.36922/aih.8527" target="_blank" rel="noopener">(Phebe et al, 2025).</a></span></li>
-                    <li><span className="sx-check"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M8 12.5l2.7 2.7L16 9.8" /></svg></span><span>The Phase-1 trial was conducted in 500 women at the SAT Hospital, Govt Medical College, Thiruvananthapuram. A multi-centric trial covering 5 institutions under the Indian Council for Medical Research (ICMR), Govt of India, is initiated as part of the Medtech Mitra scheme, to develop an algorithm and to validate the device.</span></li>
-                    <li><span className="sx-check"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M8 12.5l2.7 2.7L16 9.8" /></svg></span><span>After completing the multi-centric trials, and the CDSCO approval, the device will be introduced into the market.</span></li>
+                    <li><span className="sx-check"><CheckCircle weight="light" className="pi ico" aria-hidden="true" /></span><span>The pilot studies with the first prototype of CerviScan were conducted in 109 patients at the Kasturba Medical College, Manipal. A sensitivity of 100% and specificity of 93% was obtained in discriminating normal from abnormal (precancer and cancer) cervix in the studied population. The study results are published in the Artificial Intelligence in Health journal <a href="https://accscience.com/journal/AIH/2/3/10.36922/aih.8527" target="_blank" rel="noopener">(Phebe et al, 2025).</a></span></li>
+                    <li><span className="sx-check"><CheckCircle weight="light" className="pi ico" aria-hidden="true" /></span><span>The Phase-1 trial was conducted in 500 women at the SAT Hospital, Govt Medical College, Thiruvananthapuram. A multi-centric trial covering 5 institutions under the Indian Council for Medical Research (ICMR), Govt of India, is initiated as part of the Medtech Mitra scheme, to develop an algorithm and to validate the device.</span></li>
+                    <li><span className="sx-check"><CheckCircle weight="light" className="pi ico" aria-hidden="true" /></span><span>After completing the multi-centric trials, and the CDSCO approval, the device will be introduced into the market.</span></li>
                 </ul>
               </div>
             </section>

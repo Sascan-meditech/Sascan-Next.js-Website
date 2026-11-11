@@ -6,6 +6,7 @@ import { useCart, useCoupon } from "../../lib/cart";
 import { PRODUCTS, cartTotals, formatINR } from "../../lib/products";
 import { STATES, validateCustomer } from "../../lib/checkout";
 import OrderSummary from "./OrderSummary";
+import { CaretLeft, ShoppingCart } from "@phosphor-icons/react/dist/ssr";
 
 const WHATSAPP = "919446697551";
 const BLANK = { name: "", phone: "", email: "", address1: "", address2: "", city: "", state: "Kerala", pin: "", notes: "" };
@@ -44,7 +45,7 @@ export default function CheckoutView() {
   if (!items.length) {
     return (
       <div className="shop-empty">
-        <span className="shop-empty__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2" /><circle cx="9.5" cy="20" r="1" /><circle cx="17" cy="20" r="1" /></svg></span>
+        <span className="shop-empty__icon"><ShoppingCart weight="regular" className="pi" aria-hidden="true" /></span>
         <h2 className="shop-empty__title">Your cart is empty</h2>
         <p className="shop-empty__text">Add a product before checking out.</p>
         <Link href="/curelite" className="btn btn--primary shop-btn">Shop CureLite</Link>
@@ -114,7 +115,7 @@ export default function CheckoutView() {
         </fieldset>
 
         <Link href="/cart" className="shop-back">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>
+          <CaretLeft weight="regular" className="pi" aria-hidden="true" />
           Back to cart
         </Link>
       </div>

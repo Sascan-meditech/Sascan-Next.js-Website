@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { STATES } from "../lib/checkout";
+import { ArrowRight, Buildings, ChatText, Check, EnvelopeSimple, MapPin, Phone, User, X } from "@phosphor-icons/react/dist/ssr";
 
 /* Popup forms, available on every page:
    - "Request a demo": open with href="#demo" or a data-demo attribute
@@ -108,14 +109,14 @@ export default function DemoModal() {
   const show = (k) => FIELDS[mode].includes(k);
 
   const ICON = {
-    name: <><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4 3.6-7 8-7s8 3 8 7" /></>,
-    phone: <path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2" />,
-    email: <><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></>,
-    org: <><path d="M4 21V6l8-3 8 3v15" /><path d="M9 21v-5h6v5M12 8v4M10 10h4" /></>,
-    state: <><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z" /><circle cx="12" cy="9.5" r="2.5" /></>,
-    message: <path d="M4 5h16v11H8l-4 4z" />,
+    name: <User weight="light" className="pi" aria-hidden="true" />,
+    phone: <Phone weight="light" className="pi" aria-hidden="true" />,
+    email: <EnvelopeSimple weight="light" className="pi" aria-hidden="true" />,
+    org: <Buildings weight="light" className="pi" aria-hidden="true" />,
+    state: <MapPin weight="light" className="pi" aria-hidden="true" />,
+    message: <ChatText weight="light" className="pi" aria-hidden="true" />,
   };
-  const Icon = ({ k }) => <span className="demo__icon" aria-hidden="true"><svg viewBox="0 0 24 24">{ICON[k]}</svg></span>;
+  const Icon = ({ k }) => <span className="demo__icon" aria-hidden="true">{ICON[k]}</span>;
 
   return (
     <dialog
@@ -132,13 +133,13 @@ export default function DemoModal() {
             <h2 className="demo__title" id="demo-title">{sent ? "Thank you!" : title}</h2>
           </div>
           <button type="button" className="demo__close" onClick={close} aria-label="Close">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+            <X weight="regular" className="pi" aria-hidden="true" />
           </button>
         </header>
 
         {sent ? (
           <div className="demo__done" role="status">
-            <span className="demo__done-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+            <span className="demo__done-icon"><Check weight="regular" className="pi" aria-hidden="true" /></span>
             <p className="demo__lead">
               {mode === "quote"
                 ? "Your quote request is ready in WhatsApp — press send there and our team will get back to you with the price details."
@@ -197,7 +198,7 @@ export default function DemoModal() {
             <div className="demo__foot">
               <button type="submit" className="demo__send">
                 Send
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+                <ArrowRight weight="regular" className="pi" aria-hidden="true" />
               </button>
             </div>
           </form>

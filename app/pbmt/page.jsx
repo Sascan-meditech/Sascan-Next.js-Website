@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { CaretLeft, CaretRight, PlayCircle } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata = {
   title: "Photobiomodulation Therapy (PBMT) | Sascan Meditech",
@@ -38,10 +39,10 @@ export default function PbmtPage() {
                     <li className="pb-gallery__slide" aria-hidden="true"><img loading="lazy" src="/assets/pbmt-signaling-pathway.webp" width="1024" height="574" alt="Photobiomodulation signalling pathway: cytochrome-c-oxidase activation, NO-mediated vasodilation, increased ROS and PI3K/AKT pathway, ATP to cAMP via adenylyl cyclase, RAS/RAF/MAPK/ERK and pKA/SIRT pathways" decoding="async" /></li>
                     <li className="pb-gallery__slide" aria-hidden="true"><img loading="lazy" src="/assets/pbmt-regenerative-effects.webp" width="640" height="405" alt="Regenerative potential of photobiomodulation therapy: angiogenesis, collagen synthesis, cell proliferation and differentiation, mitochondrial ATP production, and modulation of cytokines and growth factors" decoding="async" /></li>
                   </ul>
-                  <button type="button" className="pb-gallery__arrow pb-gallery__arrow--prev" data-prev="" aria-label="Previous image"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg></button>{" "}<button type="button" className="pb-gallery__arrow pb-gallery__arrow--next" data-next="" aria-label="Next image"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6" /></svg></button>
+                  <button type="button" className="pb-gallery__arrow pb-gallery__arrow--prev" data-prev="" aria-label="Previous image"><CaretLeft weight="regular" className="pi ico" aria-hidden="true" /></button>{" "}<button type="button" className="pb-gallery__arrow pb-gallery__arrow--next" data-next="" aria-label="Next image"><CaretRight weight="regular" className="pi ico" aria-hidden="true" /></button>
                   </div>
                   <div className="pb-vcard reveal">
-                    <p className="pb-vcard__label mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M10 8.5l5 3.5-5 3.5z" /></svg>Watch the full video to know more.</p>
+                    <p className="pb-vcard__label mono"><PlayCircle weight="light" className="pi ico" aria-hidden="true" />Watch the full video to know more.</p>
                     <div className="pb-video">
                       <iframe src="https://www.youtube-nocookie.com/embed/0MMewRIP51M?rel=0" title="Photobiomodulation Therapy (PBMT): What is it? How does it work? What can it do for you?" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     </div>

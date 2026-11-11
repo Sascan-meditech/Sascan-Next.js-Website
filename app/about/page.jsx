@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { Eye, Globe, Heart, MagnifyingGlass, MapTrifold, Stethoscope, Sun, Target } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata = {
   title: "About Us | Sascan Meditech",
@@ -50,8 +51,8 @@ export default function AboutPage() {
                 </div>
                 <div className="ab-sec__body reveal">
                   <ul className="ab-vm">
-                    <li><p className="ab-vm__label mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z" /><circle cx="12" cy="12" r="3" /></svg>Vision</p><p className="ab-vm__text">To illuminate the path to a healthier world by harnessing the power of biophotonics, ensuring that early detection and effective management of life-threatening diseases are accessible to every individual.</p></li>
-                    <li><p className="ab-vm__label mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1.5" /></svg>Mission</p><p className="ab-vm__text">Focusing on the interaction of light with biological systems, we innovate, manufacture and commercialize cutting edge medical devices for detection of diseases at their inception and precise management, with a dedicated commitment to social impact.</p></li>
+                    <li><p className="ab-vm__label mono"><Eye weight="light" className="pi ico" aria-hidden="true" />Vision</p><p className="ab-vm__text">To illuminate the path to a healthier world by harnessing the power of biophotonics, ensuring that early detection and effective management of life-threatening diseases are accessible to every individual.</p></li>
+                    <li><p className="ab-vm__label mono"><Target weight="light" className="pi ico" aria-hidden="true" />Mission</p><p className="ab-vm__text">Focusing on the interaction of light with biological systems, we innovate, manufacture and commercialize cutting edge medical devices for detection of diseases at their inception and precise management, with a dedicated commitment to social impact.</p></li>
                   </ul>
                 </div>
               </div>
@@ -89,15 +90,15 @@ export default function AboutPage() {
                   <p>Sascan Meditech handles the entire lifecycle of medtech innovation from proprietary research and product design to indigenous manufacturing and global commercialization. Our core areas include:</p>
                   <div className="ab-acc__list">
                     <details className="ab-acc__item" open>
-                      <summary><span className="ab-acc__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.5" /><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1" /></svg></span><span className="ab-acc__title">Biophotonic Innovation</span><span className="ab-acc__plus" aria-hidden="true"></span></summary>
+                      <summary><span className="ab-acc__icon"><Sun weight="light" className="pi ico" aria-hidden="true" /></span><span className="ab-acc__title">Biophotonic Innovation</span><span className="ab-acc__plus" aria-hidden="true"></span></summary>
                       <p>Developing proprietary, light-based diagnostic technologies like multi-spectral and autofluorescence imaging.</p>
                     </details>
                     <details className="ab-acc__item">
-                      <summary><span className="ab-acc__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><circle cx="11" cy="11" r="3" /><path d="M21 21l-5-5" /></svg></span><span className="ab-acc__title">Early Screening</span><span className="ab-acc__plus" aria-hidden="true"></span></summary>
+                      <summary><span className="ab-acc__icon"><MagnifyingGlass weight="light" className="pi ico" aria-hidden="true" /></span><span className="ab-acc__title">Early Screening</span><span className="ab-acc__plus" aria-hidden="true"></span></summary>
                       <p>Building non-invasive medical devices that empower clinicians to detect oral and cervical cancers at early, treatable stages.</p>
                     </details>
                     <details className="ab-acc__item">
-                      <summary><span className="ab-acc__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2z" /><path d="M9 4v14M15 6v14" /></svg></span><span className="ab-acc__title">Disease Management</span><span className="ab-acc__plus" aria-hidden="true"></span></summary>
+                      <summary><span className="ab-acc__icon"><MapTrifold weight="light" className="pi ico" aria-hidden="true" /></span><span className="ab-acc__title">Disease Management</span><span className="ab-acc__plus" aria-hidden="true"></span></summary>
                       <p>Designing optical solutions that aid in treatment, mapping, and precise management of tissue abnormalities.</p>
                     </details>
                   </div>
@@ -118,19 +119,19 @@ export default function AboutPage() {
                 <div className="ab-blok ab-sec__full reveal">
                     <article className="ab-blok__col">
                       <p className="ab-blok__tag mono">Clinical<span aria-hidden="true"></span></p>
-                      <span className="ab-blok__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v6a5 5 0 0 0 10 0V3" /><path d="M11 14v2a4 4 0 0 0 8 0v-1" /><circle cx="19" cy="13" r="2" /></svg></span>
+                      <span className="ab-blok__icon"><Stethoscope weight="light" className="pi ico" aria-hidden="true" /></span>
                       <h3 className="ab-blok__title">Clinical Impact</h3>
                       <p>We provide healthcare workers and clinicians with accurate, objective, real-time screening tools that reduce diagnostic delays and support earlier detection.</p>
                     </article>
                     <article className="ab-blok__col">
                       <p className="ab-blok__tag mono">Patient<span aria-hidden="true"></span></p>
-                      <span className="ab-blok__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-8.7-9C2.2 7.6 4.3 4.5 7.6 4.5c1.9 0 3.4 1 4.4 2.5 1-1.5 2.5-2.5 4.4-2.5 3.3 0 5.4 3.1 4.3 6.5C19 15.7 12 20 12 20z" /></svg></span>
+                      <span className="ab-blok__icon"><Heart weight="light" className="pi ico" aria-hidden="true" /></span>
                       <h3 className="ab-blok__title">Patient Impact</h3>
                       <p>We reduce the need for unnecessary invasive biopsies by offering a painless screening experience that improves patient comfort and compliance.</p>
                     </article>
                     <article className="ab-blok__col">
                       <p className="ab-blok__tag mono">Social &amp; Economic<span aria-hidden="true"></span></p>
-                      <span className="ab-blok__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" /><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9s1.3-6.4 3.8-9z" /></svg></span>
+                      <span className="ab-blok__icon"><Globe weight="light" className="pi ico" aria-hidden="true" /></span>
                       <h3 className="ab-blok__title">Social &amp; Economic Impact</h3>
                       <p>Through affordable medical devices and digital connectivity, we expand access to advanced cancer screening, bringing quality healthcare to community clinics and underserved populations.</p>
                     </article>
@@ -148,11 +149,6 @@ export default function AboutPage() {
                 <div className="ab-sec__body reveal">
                   <p className="ab-lead">Committed to global quality standards and regulatory compliance in medical device innovation.</p>
                   <ul className="ab-certlist">
-                    <li className="ab-certrow">
-                      <span className="ab-certrow__logo"><img src="/assets/ce-mark.webp" alt="CE mark" width="600" height="513" loading="lazy" decoding="async" /></span>
-                      <div><h3 className="ab-certrow__name">CE Marked</h3><p>European conformity marking</p></div>
-                      <i aria-hidden="true"></i>
-                    </li>
                     <li className="ab-certrow">
                       <span className="ab-certrow__logo"><img src="/assets/bsi-iso.webp" alt="BSI and ISO 13485:2016 medical devices quality management certification" width="600" height="255" loading="lazy" decoding="async" /></span>
                       <div><h3 className="ab-certrow__name">BSI · ISO 13485:2016</h3><p>Medical devices quality management system</p></div>

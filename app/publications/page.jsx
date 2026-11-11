@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata = {
   title: "Publications | Sascan Meditech",
@@ -86,7 +87,7 @@ export default function PublicationsPage() {
                       {p.note && <p className="pub__note">{p.note}</p>}
                       <a className="pub__link" href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener">
                         Read the paper
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg>
+                        <ArrowUpRight weight="regular" className="pi" aria-hidden="true" />
                       </a>
                     </li>
                   ))}

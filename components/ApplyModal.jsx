@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { STATES } from "../lib/checkout";
 import { DEPARTMENTS, CAREERS_EMAIL } from "../lib/careers";
+import { Check, X } from "@phosphor-icons/react/dist/ssr";
 
 /* "Apply now" pop-up for the Careers page.
    Opens from any element with data-apply-role (and data-apply-dept).
@@ -139,13 +140,13 @@ export default function ApplyModal() {
             <h2 className="demo__title" id="apply-title">{sent ? "Almost done!" : "We See You, Not Your CV!"}</h2>
           </div>
           <button type="button" className="demo__close" onClick={close} aria-label="Close">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+            <X weight="regular" className="pi" aria-hidden="true" />
           </button>
         </header>
 
         {sent ? (
           <div className="demo__done" role="status">
-            <span className="demo__done-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+            <span className="demo__done-icon"><Check weight="regular" className="pi" aria-hidden="true" /></span>
             <p className="demo__lead">
               Your application email to <strong>{CAREERS_EMAIL}</strong> is ready in your email app.
               Please attach your resume (<strong>{sent}</strong>) and press send.

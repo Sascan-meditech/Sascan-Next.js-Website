@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { Check } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata = {
   title: "VagusLite — PBM Vagus Nerve Stimulation | Sascan Meditech",
@@ -55,15 +56,15 @@ export default function VagusLitePage() {
                     <h3 className="vl-col__title">Key Features of VagusLite Technology</h3>
                     <ul className="vl-items">
                       <li className="vl-item">
-                        <span className="vl-tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+                        <span className="vl-tick"><Check weight="regular" className="pi" aria-hidden="true" /></span>
                         <div><h4 className="vl-item__term">Dual-wavelength system</h4><p className="vl-item__desc">810nm near-infrared LEDs targeting the carotid triangle region</p></div>
                       </li>
                       <li className="vl-item">
-                        <span className="vl-tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+                        <span className="vl-tick"><Check weight="regular" className="pi" aria-hidden="true" /></span>
                         <div><h4 className="vl-item__term">Intranasal photobiomodulation</h4><p className="vl-item__desc">650nm red light therapy for comprehensive neural support</p></div>
                       </li>
                       <li className="vl-item">
-                        <span className="vl-tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+                        <span className="vl-tick"><Check weight="regular" className="pi" aria-hidden="true" /></span>
                         <div><h4 className="vl-item__term">Comfortable neck collar design</h4><p className="vl-item__desc">Ergonomic, wearable form factor for daily use</p></div>
                       </li>
                     </ul>
@@ -72,15 +73,15 @@ export default function VagusLitePage() {
                     <h3 className="vl-col__title">Mitochondrial Activation and ATP Enhancement</h3>
                     <ul className="vl-items">
                       <li className="vl-item">
-                        <span className="vl-tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+                        <span className="vl-tick"><Check weight="regular" className="pi" aria-hidden="true" /></span>
                         <div><h4 className="vl-item__term">Cytochrome c oxidase stimulation</h4><p className="vl-item__desc">Near-infrared light activates this key mitochondrial enzyme</p></div>
                       </li>
                       <li className="vl-item">
-                        <span className="vl-tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+                        <span className="vl-tick"><Check weight="regular" className="pi" aria-hidden="true" /></span>
                         <div><h4 className="vl-item__term">Increased cellular energy production</h4><p className="vl-item__desc">Enhanced ATP synthesis supports optimal nerve function</p></div>
                       </li>
                       <li className="vl-item">
-                        <span className="vl-tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+                        <span className="vl-tick"><Check weight="regular" className="pi" aria-hidden="true" /></span>
                         <div><h4 className="vl-item__term">Improved mitochondrial biogenesis</h4><p className="vl-item__desc">Light therapy promotes the formation of new cellular powerhouses</p></div>
                       </li>
                     </ul>
@@ -89,19 +90,19 @@ export default function VagusLitePage() {
                     <h3 className="vl-col__title">Neuroprotective and Anti-Inflammatory Effects</h3>
                     <ul className="vl-items">
                       <li className="vl-item">
-                        <span className="vl-tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+                        <span className="vl-tick"><Check weight="regular" className="pi" aria-hidden="true" /></span>
                         <div><h4 className="vl-item__term">Reduced neuroinflammation</h4><p className="vl-item__desc">PBM modulates inflammatory cytokines affecting vagal function</p></div>
                       </li>
                       <li className="vl-item">
-                        <span className="vl-tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+                        <span className="vl-tick"><Check weight="regular" className="pi" aria-hidden="true" /></span>
                         <div><h4 className="vl-item__term">Enhanced nerve growth factors</h4><p className="vl-item__desc">Stimulation of BDNF and other neurotrophic factor</p></div>
                       </li>
                       <li className="vl-item">
-                        <span className="vl-tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+                        <span className="vl-tick"><Check weight="regular" className="pi" aria-hidden="true" /></span>
                         <div><h4 className="vl-item__term">Oxidative stress reduction</h4><p className="vl-item__desc">Antioxidant pathway activation protects nerve tissue</p></div>
                       </li>
                       <li className="vl-item">
-                        <span className="vl-tick"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+                        <span className="vl-tick"><Check weight="regular" className="pi" aria-hidden="true" /></span>
                         <div><h4 className="vl-item__term">Improved microcirculation</h4><p className="vl-item__desc">Enhanced blood flow supports nerve health and function</p></div>
                       </li>
                     </ul>

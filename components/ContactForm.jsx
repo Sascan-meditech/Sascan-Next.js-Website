@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { STATES } from "../lib/checkout";
+import { Check } from "@phosphor-icons/react/dist/ssr";
 
 /* Contact Us form with tabs: General Enquiry / Get a Quote / Request a Demo.
    "Get a Quote" and "Request a Demo" ask for exactly the same details as the site pop-up
@@ -162,7 +163,7 @@ export default function ContactForm() {
 
       {sent ? (
         <div className="ct-done" role="status">
-          <span className="ct-done__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+          <span className="ct-done__icon" aria-hidden="true"><Check weight="regular" className="pi" aria-hidden="true" /></span>
           <p>{DONE[tab.key]}</p>
           <button type="button" className="btn btn--secondary" onClick={() => setSent(false)}>Send another message</button>
         </div>

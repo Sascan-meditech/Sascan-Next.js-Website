@@ -5,9 +5,10 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { addItem } from "../../lib/cart";
 import QtyStepper from "./QtyStepper";
+import { Check, ShoppingCart } from "@phosphor-icons/react/dist/ssr";
 
 const CartIcon = () => (
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2" /><circle cx="9.5" cy="20" r="1" /><circle cx="17" cy="20" r="1" /></svg>
+  <ShoppingCart weight="regular" className="pi" aria-hidden="true" />
 );
 
 /* Product page: quantity + Add to cart + Buy now.
@@ -30,7 +31,7 @@ export default function AddToCart({ productId, name, compact = false }) {
     return (
       <button type="button" className={`cl-mini-add${added ? " is-added" : ""}`} onClick={add} aria-label={`Add ${name} to cart`}>
         {added ? (
-          <><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>Added</>
+          <><Check weight="regular" className="pi" aria-hidden="true" />Added</>
         ) : (
           <><CartIcon />Add to cart</>
         )}
@@ -60,7 +61,7 @@ export default function AddToCart({ productId, name, compact = false }) {
       <p className={`cl-added${added ? " is-on" : ""}`} role="status">
         {added && (
           <>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" /></svg>
+            <Check weight="regular" className="pi" aria-hidden="true" />
             Added to your cart. <Link href="/cart">View cart</Link>
           </>
         )}

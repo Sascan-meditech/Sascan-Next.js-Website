@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ApplyModal from "../../components/ApplyModal";
 import { DEPARTMENTS, CAREERS_EMAIL } from "../../lib/careers";
+import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata = {
   title: "Careers | Sascan Meditech",
@@ -14,7 +15,7 @@ const EMAIL = CAREERS_EMAIL;
 const mailto = (role) => `mailto:${EMAIL}?subject=${encodeURIComponent(`Application – ${role}`)}`;
 
 const Chevron = () => (
-  <svg className="jo-chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+  <CaretDown weight="regular" className="pi jo-chev" aria-hidden="true" />
 );
 
 export default function CareersPage() {

@@ -1,5 +1,6 @@
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { ArrowsClockwise, Crosshair, ShieldCheck, Target } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata = {
   title: "Multimodal Imaging Technology | Sascan Meditech",
@@ -32,10 +33,10 @@ export default function MultimodalImagingPage() {
                   <div className="reveal" id="benefits">
                     <h2 className="pb-h2">Key Clinical <span className="accent">Benefits</span></h2>
                     <ul className="mm-benefits">
-                      <li><span className="mm-benefits__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4" /><circle cx="12" cy="12" r="4" /></svg></span><span>Non invasive, point of care solutions</span></li>
-                      <li><span className="mm-benefits__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="4.5" /><circle cx="12" cy="12" r="1" /></svg></span><span>Accurately identifies the most malignant site for biopsy</span></li>
-                      <li><span className="mm-benefits__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8.5" /><path d="M20 4v4.5h-4.5" /><path d="M20 12a8 8 0 0 1-13.7 5.6L4 15.5" /><path d="M4 20v-4.5h4.5" /></svg></span><span>Reduces unnecessary repeat biopsies</span></li>
-                      <li><span className="mm-benefits__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z" /><path d="M8.5 12l2.5 2.5 4.5-4.5" /></svg></span><span>Patented and clinically validated</span></li>
+                      <li><span className="mm-benefits__icon"><Crosshair weight="light" className="pi ico" aria-hidden="true" /></span><span>Non invasive, point of care solutions</span></li>
+                      <li><span className="mm-benefits__icon"><Target weight="light" className="pi ico" aria-hidden="true" /></span><span>Accurately identifies the most malignant site for biopsy</span></li>
+                      <li><span className="mm-benefits__icon"><ArrowsClockwise weight="light" className="pi ico" aria-hidden="true" /></span><span>Reduces unnecessary repeat biopsies</span></li>
+                      <li><span className="mm-benefits__icon"><ShieldCheck weight="light" className="pi ico" aria-hidden="true" /></span><span>Patented and clinically validated</span></li>
                     </ul>
                   </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import { MAX_QTY } from "../../lib/products";
+import { Minus, Plus } from "@phosphor-icons/react/dist/ssr";
 
 /* − [n] + quantity box */
 export default function QtyStepper({ value, onChange, label = "Quantity", small = false }) {
@@ -8,7 +9,7 @@ export default function QtyStepper({ value, onChange, label = "Quantity", small 
   return (
     <div className={`cl-qty${small ? " cl-qty--sm" : ""}`}>
       <button type="button" aria-label={`Decrease ${label.toLowerCase()}`} onClick={() => set(value - 1)} disabled={value <= 1}>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 12h12" /></svg>
+        <Minus weight="regular" className="pi" aria-hidden="true" />
       </button>
       <input
         type="number"
@@ -20,7 +21,7 @@ export default function QtyStepper({ value, onChange, label = "Quantity", small 
         onChange={(e) => set(e.target.value)}
       />
       <button type="button" aria-label={`Increase ${label.toLowerCase()}`} onClick={() => set(value + 1)} disabled={value >= MAX_QTY}>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 6v12M6 12h12" /></svg>
+        <Plus weight="regular" className="pi" aria-hidden="true" />
       </button>
     </div>
   );

@@ -5,6 +5,7 @@ import { useCart, useCoupon, setQty, removeItem } from "../../lib/cart";
 import { PRODUCTS, cartTotals, formatINR } from "../../lib/products";
 import QtyStepper from "./QtyStepper";
 import OrderSummary from "./OrderSummary";
+import { CaretLeft, ShoppingCart, Trash } from "@phosphor-icons/react/dist/ssr";
 
 function ProductLink({ p, className, children }) {
   return p.href.startsWith("/")
@@ -19,7 +20,7 @@ export default function CartView() {
   if (!items.length) {
     return (
       <div className="shop-empty">
-        <span className="shop-empty__icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1.5 1.5 0 0 0 1.5 1.2h8.6a1.5 1.5 0 0 0 1.5-1.1L21 8H6.2" /><circle cx="9.5" cy="20" r="1" /><circle cx="17" cy="20" r="1" /></svg></span>
+        <span className="shop-empty__icon"><ShoppingCart weight="regular" className="pi" aria-hidden="true" /></span>
         <h2 className="shop-empty__title">Your cart is empty</h2>
         <p className="shop-empty__text">Add a product to see it here.</p>
         <Link href="/curelite" className="btn btn--primary shop-btn">Shop CureLite</Link>
@@ -42,7 +43,7 @@ export default function CartView() {
                   <ProductLink p={p} className="cart-item__name">{p.name}</ProductLink>
                   <p className="cart-item__unit">{formatINR(p.price)} <del>{formatINR(p.mrp)}</del></p>
                   <button type="button" className="cart-item__remove" onClick={() => removeItem(id)}>
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3" /></svg>
+                    <Trash weight="regular" className="pi" aria-hidden="true" />
                     Remove
                   </button>
                 </div>
@@ -53,7 +54,7 @@ export default function CartView() {
           })}
         </ul>
         <Link href="/curelite" className="shop-back">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6" /></svg>
+          <CaretLeft weight="regular" className="pi" aria-hidden="true" />
           Continue shopping
         </Link>
       </div>

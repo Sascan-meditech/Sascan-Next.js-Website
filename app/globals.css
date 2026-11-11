@@ -1317,7 +1317,7 @@ h4 { font-weight: var(--weight-medium); }
 .sp-fig__cap { display: flex; justify-content: space-between; gap: var(--space-5); padding: var(--space-5) var(--space-6); border-bottom: 1px solid var(--line); color: var(--fg-2); }
 .sp-fig__img { background: #FFFFFF; }
 .sp-fig__img img { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; padding: var(--space-6); }
-.sp-fig__foot { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); color: var(--fg-2); }
+.sp-fig__foot { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; border-top: 1px solid var(--line); color: var(--fg-2); }
 .sp-fig__foot span { padding: var(--space-4) var(--space-6); }
 .sp-fig__foot span + span { border-left: 1px solid var(--line); }
 .sp-fig__foot span:last-child { color: var(--accent); }
@@ -2398,3 +2398,22 @@ input[type="submit"], input[type="button"], input[type="reset"],
 .ct-form__send { height: 40px; min-width: 140px; }
 .os-btn { padding: 9px 18px; font-size: 14px; }
 .ap-btn--solid { padding: 9px 20px; font-size: 15px; }
+
+/* 4. Icons — Phosphor icon set (components import from @phosphor-icons/react).
+      Icons are filled shapes, so the old line-icon stroke rules are switched off.
+      Feature icons sit on a soft blue-to-green tinted tile with the shared 6px curve. */
+svg.pi { fill: currentColor !important; stroke: none !important; flex-shrink: 0; }
+.nav__subicon, .layer-item__icon, .hiw__icon, .tm-why__icon, .mm-benefits__icon,
+.ab-acc__icon, .ab-blok__icon, .ct-ccard__icon, .cl-acc__icon {
+  color: var(--brand-blue) !important;
+  background: linear-gradient(145deg, #EAF3FA, #F3F8EC) !important;
+  box-shadow: inset 0 0 0 1px rgb(0 113 188 / 0.12) !important;
+  border-radius: var(--radius-ui) !important;
+  transition: box-shadow .3s ease, transform .3s ease;
+}
+.nav__subicon svg.pi, .layer-item__icon svg.pi, .hiw__icon svg.pi, .tm-why__icon svg.pi, .mm-benefits__icon svg.pi,
+.ab-acc__icon svg.pi, .ab-blok__icon svg.pi, .ct-ccard__icon svg.pi, .cl-acc__icon svg.pi { width: 56%; height: 56%; }
+.nav__sublink:hover .nav__subicon, .layer-item.is-active .layer-item__icon, .hiw__step:hover .hiw__icon,
+.ct-ccard:hover .ct-ccard__icon, .cl-acc__item[open] .cl-acc__icon {
+  box-shadow: inset 0 0 0 1px var(--brand-blue) !important;
+}

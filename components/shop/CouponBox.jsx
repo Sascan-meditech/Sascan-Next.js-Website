@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { setCoupon } from "../../lib/cart";
 import { checkCoupon, formatINR } from "../../lib/products";
+import { CaretDown, Tag } from "@phosphor-icons/react/dist/ssr";
 
 /* "Apply coupon" field for the order summary. `totals` comes from cartTotals(items, couponCode). */
 export default function CouponBox({ totals }) {
@@ -14,7 +15,7 @@ export default function CouponBox({ totals }) {
     return (
       <div className="coupon coupon--on">
         <span className="coupon__tag">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z" /><circle cx="7.5" cy="8.5" r="1.3" /></svg>
+          <Tag weight="regular" className="pi" aria-hidden="true" />
           <span><strong>{totals.coupon.code}</strong> applied · {totals.coupon.label}</span>
         </span>
         <button type="button" className="coupon__remove" onClick={() => setCoupon("")}>Remove</button>
@@ -37,9 +38,9 @@ export default function CouponBox({ totals }) {
   return (
     <div className="coupon">
       <button type="button" className="coupon__toggle" aria-expanded={open} aria-controls="coupon-form" onClick={() => setOpen((o) => !o)}>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12V4h8l10 10-8 8z" /><circle cx="7.5" cy="8.5" r="1.3" /></svg>
+        <Tag weight="regular" className="pi" aria-hidden="true" />
         Have a coupon code?
-        <svg className="coupon__chev" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
+        <CaretDown weight="regular" className="pi coupon__chev" aria-hidden="true" />
       </button>
       {open && (
         <div className="coupon__form" id="coupon-form">

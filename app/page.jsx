@@ -2,6 +2,7 @@ import Link from "next/link";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TrustStrip from "../components/TrustStrip";
+import { ArrowUpRight, ChatCircle, Cpu, Crosshair, Cube, Factory, Flask, FlowArrow, Heartbeat, MapPin, Newspaper, Pulse, Quotes, Scan, ShieldCheck } from "@phosphor-icons/react/dist/ssr";
 
 export default function HomePage() {
   return (
@@ -34,7 +35,7 @@ export default function HomePage() {
           <section className="section" id="technology">
             <div className="container">
               <div className="section__head reveal">
-                <span className="label mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2" /><rect x="9.5" y="9.5" width="5" height="5" rx="1" /><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" /></svg>Technology</span>
+                <span className="label mono"><Cpu weight="light" className="pi ico" aria-hidden="true" />Technology</span>
                 <h2>Four Layers Of One <span className="accent">Screening Platform.</span></h2>
                 <p className="lead">Multispectral imaging, real-time mapping and multimodal detection — built for low-cost screening.</p>
               </div>
@@ -42,7 +43,7 @@ export default function HomePage() {
               <div className="layers">
                 <figure className="layers__figure map reveal" aria-labelledby="mapTitle">
                   <div className="map__head mono">
-                    <span id="mapTitle"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" /><circle cx="12" cy="10" r="2.5" /></svg>Installations across India</span>{" "}<span className="live"><span className="live__dot" aria-hidden="true"></span><span id="siteCount">0</span>&nbsp;sites</span>
+                    <span id="mapTitle"><MapPin weight="light" className="pi ico" aria-hidden="true" />Installations across India</span>{" "}<span className="live"><span className="live__dot" aria-hidden="true"></span><span id="siteCount">0</span>&nbsp;sites</span>
                   </div>
                   <div className="map__stage">
                     <svg className="map__svg" viewBox="0 0 400 445.6" aria-hidden="true" data-lon0="67.5" data-lat1="37.5" data-k="0.927184" data-s="14.144718">
@@ -68,28 +69,28 @@ export default function HomePage() {
 
                 <ol className="layers__list">
                   <li className="layer-item reveal" data-layer="1" tabIndex={0}>
-                    <span className="layer-item__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12h4l3-7 4 14 3-7h6" /></svg></span>
+                    <span className="layer-item__icon"><Pulse weight="light" className="pi ico" aria-hidden="true" /></span>
                     <div>
                       <h3>Technology</h3>
                       <p>Detects early biochemical and morphological tissue changes using multispectral imaging.</p>
                     </div>
                   </li>
                   <li className="layer-item reveal" data-layer="2" tabIndex={0}>
-                    <span className="layer-item__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" /><circle cx="12" cy="12" r="3" /><path d="M12 1v3M12 20v3M1 12h3M20 12h3" /></svg></span>
+                    <span className="layer-item__icon"><Crosshair weight="light" className="pi ico" aria-hidden="true" /></span>
                     <div>
                       <h3>Edge</h3>
                       <p>Real-time monochrome imaging accurately maps hemoglobin absorption to biopsy sites.</p>
                     </div>
                   </li>
                   <li className="layer-item reveal" data-layer="3" tabIndex={0}>
-                    <span className="layer-item__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M16 4h3a1 1 0 0 1 1 1v3M20 16v3a1 1 0 0 1-1 1h-3M8 20H5a1 1 0 0 1-1-1v-3" /><path d="M7 12h10" /></svg></span>
+                    <span className="layer-item__icon"><Scan weight="light" className="pi ico" aria-hidden="true" /></span>
                     <div>
                       <h3>Application</h3>
                       <p>Our multimodal technology detects most cell carcinomas and adapts to endoscopy.</p>
                     </div>
                   </li>
                   <li className="layer-item reveal" data-layer="4" tabIndex={0}>
-                    <span className="layer-item__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.3-8.7-9C2.2 7.6 4.3 4.5 7.6 4.5c1.9 0 3.4 1 4.4 2.5 1-1.5 2.5-2.5 4.4-2.5 3.3 0 5.4 3.1 4.3 6.5C19 15.7 12 20 12 20z" /><path d="M7 12h2.5l1.5-2.5 2 5 1.5-2.5H17" /></svg></span>
+                    <span className="layer-item__icon"><Heartbeat weight="light" className="pi ico" aria-hidden="true" /></span>
                     <div>
                       <h3>Impact</h3>
                       <p>Our technology enables a low-cost screening of oral and cervical tissues saving lives.</p>
@@ -104,7 +105,7 @@ export default function HomePage() {
           <section className="section section--rule" id="products">
             <div className="container">
               <div className="section__head section__head--wide reveal">
-                <span className="label mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z" /><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" /></svg>Product lineup</span>
+                <span className="label mono"><Cube weight="light" className="pi ico" aria-hidden="true" />Product lineup</span>
                 <h2 className="one-line">Screening Products Built For <span className="accent">Early Detection.</span></h2>
                 <p className="lead">From oral and cervical screening to clinical care — innovating medical technology for better healthcare.</p>
               </div>
@@ -140,7 +141,7 @@ export default function HomePage() {
           <section className="section section--rule" id="how-it-works">
             <div className="container hiw-wrap">
               <div className="section__head hiw-wrap__head reveal">
-                <span className="label mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h4l2-5 4 10 2-5h4" /></svg>How It Works</span>
+                <span className="label mono"><FlowArrow weight="light" className="pi ico" aria-hidden="true" />How It Works</span>
                 <h2>From Research to <span className="accent">Healthcare Impact</span></h2>
                 <p className="lead">Where advanced research evolves into reliable medical technology. Improving healthcare outcomes through innovation.</p>
               </div>
@@ -151,7 +152,7 @@ export default function HomePage() {
                       <h3 className="hiw__title">Research &amp; Technology Development</h3>
                       <p className="hiw__desc">Conduct research, develop technologies, and prototype devices.</p>
                     </div>
-                    <span className="hiw__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3" /><path d="M7.5 14h9" /></svg></span>
+                    <span className="hiw__icon"><Flask weight="light" className="pi ico" aria-hidden="true" /></span>
                   </li>
                   <li className="hiw__step">
                     <span className="hiw__num mono">02</span>
@@ -159,7 +160,7 @@ export default function HomePage() {
                       <h3 className="hiw__title">Testing, Validation &amp; Compliance</h3>
                       <p className="hiw__desc">Perform clinical testing and ensure regulatory compliance.</p>
                     </div>
-                    <span className="hiw__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z" /><path d="M8.5 12l2.5 2.5 4.5-5" /></svg></span>
+                    <span className="hiw__icon"><ShieldCheck weight="light" className="pi ico" aria-hidden="true" /></span>
                   </li>
                   <li className="hiw__step">
                     <span className="hiw__num mono">03</span>
@@ -167,7 +168,7 @@ export default function HomePage() {
                       <h3 className="hiw__title">Advanced Manufacturing &amp; Deployment</h3>
                       <p className="hiw__desc">Scale production and deliver solutions to healthcare providers.</p>
                     </div>
-                    <span className="hiw__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21V10l5 3V10l5 3V6l8 4v11z" /><path d="M7 17h2M12 17h2M17 17h1" /></svg></span>
+                    <span className="hiw__icon"><Factory weight="light" className="pi ico" aria-hidden="true" /></span>
                   </li>
               </ol>
             </div>
@@ -177,43 +178,43 @@ export default function HomePage() {
           <section className="section section--rule" id="testimonials">
             <div className="container">
               <div className="section__head reveal">
-                <span className="label mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z" /></svg>Testimonials</span>
+                <span className="label mono"><ChatCircle weight="light" className="pi ico" aria-hidden="true" />Testimonials</span>
                 <h2>What They Say About <span className="accent">OralScan.</span></h2>
               </div>
               <div className="quotes quotes--marquee reveal" data-quotes aria-label="Testimonials">
                 <div className="quotes__track">
                   <figure className="quote">
-                    <span className="quote__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11H6V7h4zm0 0c0 3-1 5-4 6M18 11h-4V7h4zm0 0c0 3-1 5-4 6" /></svg></span>
+                    <span className="quote__icon"><Quotes weight="fill" className="pi ico" aria-hidden="true" /></span>
                     <blockquote>“We are impressed by the innovation and effort behind this device. Our Dean, Trustee, and faculty appreciate its outstanding performance.”</blockquote>
                     <figcaption><img className="quote__avatar" src="/assets/oralscan/dr-devarsh-mavani.webp" width="160" height="160" alt="Dr Devarsh Mavani" loading="lazy" decoding="async" /><span className="quote__who"><strong>Dr Devarsh Mavani</strong><span>Ahmedabad Dental College</span></span></figcaption>
                   </figure>
                   <figure className="quote">
-                    <span className="quote__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11H6V7h4zm0 0c0 3-1 5-4 6M18 11h-4V7h4zm0 0c0 3-1 5-4 6" /></svg></span>
+                    <span className="quote__icon"><Quotes weight="fill" className="pi ico" aria-hidden="true" /></span>
                     <blockquote>“As a non-invasive imaging solution, provides valuable support in clinical decision-making and has the potential to improve diagnostics.”</blockquote>
                     <figcaption><img className="quote__avatar" src="/assets/oralscan/dr-anita-balan.webp" width="160" height="160" alt="Dr Anita Balan" loading="lazy" decoding="async" /><span className="quote__who"><strong>Dr Anita Balan</strong><span>Principal, GDC, Thiruvananthapuram</span></span></figcaption>
                   </figure>
                   <figure className="quote">
-                    <span className="quote__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11H6V7h4zm0 0c0 3-1 5-4 6M18 11h-4V7h4zm0 0c0 3-1 5-4 6" /></svg></span>
+                    <span className="quote__icon"><Quotes weight="fill" className="pi ico" aria-hidden="true" /></span>
                     <blockquote>“OralScan-guided biopsy successfully diagnosed a well-differentiated cell carcinoma (SCC), highlighting its strong clinical potential.”</blockquote>
                     <figcaption><img className="quote__avatar" src="/assets/oralscan/dr-sanjay-cj.webp" width="160" height="160" alt="Dr Sanjay C. J., MDS" loading="lazy" decoding="async" /><span className="quote__who"><strong>Dr Sanjay C. J., MDS</strong><span>Business Owner / Dental Practitioner</span></span></figcaption>
                   </figure>
                   <figure className="quote">
-                    <span className="quote__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11H6V7h4zm0 0c0 3-1 5-4 6M18 11h-4V7h4zm0 0c0 3-1 5-4 6" /></svg></span>
+                    <span className="quote__icon"><Quotes weight="fill" className="pi ico" aria-hidden="true" /></span>
                     <blockquote>“OralScan® is going to create a big change in the future. It can screen cancer, prevent cancer and can help diagnose cancer with improved accuracy.”</blockquote>
                     <figcaption><img className="quote__avatar" src="/assets/oralscan/dr-radhamadhab-sahu.webp" width="160" height="160" alt="Dr. Radhamadhab Sahu, MS" loading="lazy" decoding="async" /><span className="quote__who"><strong>Dr. Radhamadhab Sahu, MS</strong><span>IMS and SUM Hospital, Bhubaneswar</span></span></figcaption>
                   </figure>
                   <figure className="quote">
-                    <span className="quote__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11H6V7h4zm0 0c0 3-1 5-4 6M18 11h-4V7h4zm0 0c0 3-1 5-4 6" /></svg></span>
+                    <span className="quote__icon"><Quotes weight="fill" className="pi ico" aria-hidden="true" /></span>
                     <blockquote>“We found the OralScan to be of major use in decision making and also for determining the most malignant site for biopsy.”</blockquote>
                     <figcaption><img className="quote__avatar" src="/assets/oralscan/dr-vidyarani-shyam-sundar.webp" width="160" height="160" alt="Dr. Vidyarani Shyam Sundar, MDS" loading="lazy" decoding="async" /><span className="quote__who"><strong>Dr. Vidyarani Shyam Sundar, MDS</strong><span>COCPAR, Sree Balaji Dental College, Chennai</span></span></figcaption>
                   </figure>
                   <figure className="quote">
-                    <span className="quote__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11H6V7h4zm0 0c0 3-1 5-4 6M18 11h-4V7h4zm0 0c0 3-1 5-4 6" /></svg></span>
+                    <span className="quote__icon"><Quotes weight="fill" className="pi ico" aria-hidden="true" /></span>
                     <blockquote>“OralScan is first of a kind algorithm based intraoral screening device, which serves as a useful diagnostic adjuvant.”</blockquote>
                     <figcaption><img className="quote__avatar" src="/assets/oralscan/dr-mahesh-datta-rao.webp" width="160" height="160" alt="Prof (Dr.) Mahesh Datta Rao, MDS" loading="lazy" decoding="async" /><span className="quote__who"><strong>Prof (Dr.) Mahesh Datta Rao, MDS</strong><span>Dayanand Sagar Dental College, Bengaluru</span></span></figcaption>
                   </figure>
                   <figure className="quote">
-                    <span className="quote__icon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10 11H6V7h4zm0 0c0 3-1 5-4 6M18 11h-4V7h4zm0 0c0 3-1 5-4 6" /></svg></span>
+                    <span className="quote__icon"><Quotes weight="fill" className="pi ico" aria-hidden="true" /></span>
                     <blockquote>“OralScan is an objective assessment tool that comes with a cloud-based algorithm and is ideally suited for early detection of oral cancers.”</blockquote>
                     <figcaption><img className="quote__avatar" src="/assets/oralscan/dr-apala-baduni.webp" width="160" height="160" alt="Dr. Apala Baduni, MDS" loading="lazy" decoding="async" /><span className="quote__who"><strong>Dr. Apala Baduni, MDS</strong><span>Ekohum Foundation</span></span></figcaption>
                   </figure>
@@ -227,12 +228,12 @@ export default function HomePage() {
             <div className="container">
               <div className="section__head section__head--split reveal">
                 <div>
-                  <span className="label mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h13v14H6a2 2 0 0 1-2-2z" /><path d="M17 9h3v8a2 2 0 0 1-2 2" /><path d="M7.5 8.5h6M7.5 12h6M7.5 15.5h4" /></svg>Latest news &amp; blogs</span>
+                  <span className="label mono"><Newspaper weight="light" className="pi ico" aria-hidden="true" />Latest news &amp; blogs</span>
                   <h2>Sascan In <span className="accent">The News.</span></h2>
                 </div>
                 <div className="section__head-aside">
                   <p className="lead">Events, exhibitions and updates from the Sascan team.</p>
-                  <a href="#" className="text-link">View all news <svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></a>
+                  <a href="#" className="text-link">View all news <ArrowUpRight weight="regular" className="pi ico" aria-hidden="true" /></a>
                 </div>
               </div>
               <div className="posts">
@@ -242,10 +243,10 @@ export default function HomePage() {
                     <img className="post__img" src="/assets/bio-connect-4.webp" alt="Sascan team at the Bio Connect 4.0 expo and conclave, Hyatt Regency Trivandrum" loading="lazy" decoding="async" />{" "}<span className="post__tag mono">Event</span>
                   </div>
                   <div className="post__body">
-                    <p className="post__meta mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" /><circle cx="12" cy="10" r="2.5" /></svg><span>Hyatt Regency Trivandrum</span></p>
+                    <p className="post__meta mono"><MapPin weight="light" className="pi ico" aria-hidden="true" /><span>Hyatt Regency Trivandrum</span></p>
                     <h3 className="post__title">Bio Connect 4.0</h3>
                     <p className="post__excerpt">We are thrilled to announce that Sascan is an active participant at the prestigious BioConnect 4.0 connecting science to business!</p>
-                    <span className="text-link post__more">Read more <svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+                    <span className="text-link post__more">Read more <ArrowUpRight weight="regular" className="pi ico" aria-hidden="true" /></span>
                   </div>
                 </article>
                 <article className="post reveal">
@@ -254,10 +255,10 @@ export default function HomePage() {
                     <img className="post__img" src="/assets/bio%20international%20convention.webp" alt="Sascan at the BIO International Convention 2026, San Diego" loading="lazy" decoding="async" />{" "}<span className="post__tag mono">Event</span>
                   </div>
                   <div className="post__body">
-                    <p className="post__meta mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" /><circle cx="12" cy="10" r="2.5" /></svg><span>San Diego, USA · June 22–25, 2026</span></p>
+                    <p className="post__meta mono"><MapPin weight="light" className="pi ico" aria-hidden="true" /><span>San Diego, USA · June 22–25, 2026</span></p>
                     <h3 className="post__title">BIO International Convention</h3>
                     <p className="post__excerpt">We are excited to participate in the BIO International Convention 2026, held from June 22–25 at the San Diego Convention Center, San Diego, USA.</p>
-                    <span className="text-link post__more">Read more <svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+                    <span className="text-link post__more">Read more <ArrowUpRight weight="regular" className="pi ico" aria-hidden="true" /></span>
                   </div>
                 </article>
                 <article className="post reveal">
@@ -266,10 +267,10 @@ export default function HomePage() {
                     <img className="post__img" src="/assets/huddle%20global.webp" alt="Sascan Meditech exhibition stall with OralScan at Huddle Global 2025, Trivandrum" loading="lazy" decoding="async" />{" "}<span className="post__tag mono">Exhibition</span>
                   </div>
                   <div className="post__body">
-                    <p className="post__meta mono"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z" /><circle cx="12" cy="10" r="2.5" /></svg><span>Trivandrum · 2025</span></p>
+                    <p className="post__meta mono"><MapPin weight="light" className="pi ico" aria-hidden="true" /><span>Trivandrum · 2025</span></p>
                     <h3 className="post__title">Huddle Global 2025</h3>
                     <p className="post__excerpt">Sascan had the privilege of exhibiting at Huddle Global 2025 in Trivandrum, the seventh edition of one of India’s most prestigious tech startup events!</p>
-                    <span className="text-link post__more">Read more <svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" /></svg></span>
+                    <span className="text-link post__more">Read more <ArrowUpRight weight="regular" className="pi ico" aria-hidden="true" /></span>
                   </div>
                 </article>
               </div>
