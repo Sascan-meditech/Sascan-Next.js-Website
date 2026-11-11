@@ -384,10 +384,11 @@ h4 { font-weight: var(--weight-medium); }
 .pill__more { color: var(--fg); font-weight: var(--weight-medium); white-space: nowrap; }
 
 .hero__title { margin: var(--space-7) 0 var(--space-6); font-size: var(--hero-size); font-weight: var(--weight-medium); line-height: 1.05; letter-spacing: -0.01em; }
-.hero__content .lead { max-width: 560px; }
+.hero__content .lead { max-width: 720px; text-wrap: balance; }
 .hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-7); margin-top: var(--space-8); }
 .hero__actions .btn { height: 34px; padding: 0 var(--space-6); font-size: 13px; }
 .hero__actions .text-link { font-size: 13px; }
+@media (max-width: 640px) { .hero__actions { margin-top: var(--space-6); gap: var(--space-6); } }
 
 /* Technical figure (reference: black panel with caption rows) */
 .drawing { background: var(--panel); overflow: hidden; }
