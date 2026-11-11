@@ -3,7 +3,7 @@
    ----------------------------------------------------------
    House rules (agreed with Sascan, Nov 2026):
    - Colour: logo blue #0071BC and logo green #8CC63F only, plus neutrals.
-   - Type: IBM Plex Sans for everything. Page titles and section headings
+   - Type: IBM Plex Sans headings, Source Sans 3 text. Page titles and section headings
      share one style (Regular, max 40px); only the home hero is larger.
    - Shape: square corners on every button, image and form field.
    - Buttons: compact, no arrow icons.
@@ -27,10 +27,10 @@
   --grey-50: #F6F6F7;
   --white: #FFFFFF;
 
-  /* Typography: IBM Plex Sans everywhere (headings, body, labels, buttons) */
-  --font-display: var(--font-plex), sans-serif;
-  --font-body: var(--font-plex), sans-serif;
-  --font-mono: var(--font-plex), sans-serif;           /* labels: Plex caps with wide tracking */
+  /* Typography: IBM Plex Sans for headings, Source Sans 3 for body text, labels and buttons */
+  --font-display: var(--font-plex), system-ui, sans-serif;
+  --font-body: var(--font-source), system-ui, sans-serif;
+  --font-mono: var(--font-source), system-ui, sans-serif;  /* labels: Source Sans caps with wide tracking */
   --text-label: 13px;  --lh-label: 15.34px;  --ls-label: 0.14em;
   --text-xs: 12px;     --lh-xs: 14.4px;
   --text-sm: 16px;     --lh-sm: 22.4px;
@@ -54,7 +54,7 @@
   --title-size: clamp(28px, 3vw, 40px);
   --title-weight: var(--weight-regular);
   --title-leading: 1.1;
-  --title-tracking: -0.02em;
+  --title-tracking: -0.01em;
   --hero-size: clamp(38px, 4.6vw, 64px);    /* home hero only */
   --subhead-size: clamp(19px, 1.6vw, 24px); /* small headings inside a section */
   --statement-size: clamp(22px, 2.2vw, 30px);
@@ -129,7 +129,7 @@ h4 { font-weight: var(--weight-medium); }
   font-size: var(--text-label); line-height: var(--lh-label);
   letter-spacing: var(--ls-label); text-transform: uppercase;
 }
-.lead { font-family: var(--font-display); font-size: var(--text-lead); line-height: var(--lh-lead); color: var(--fg-2); }
+.lead { font-family: var(--font-body); font-size: var(--text-lead); line-height: var(--lh-lead); color: var(--fg-2); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .skip-link { position: absolute; left: var(--space-5); top: -60px; z-index: 100; padding: var(--space-4) var(--space-5); border-radius: var(--radius-6); background: var(--btn-bg); color: var(--btn-fg); }
 .skip-link:focus { top: var(--space-5); }
@@ -347,7 +347,11 @@ h4 { font-weight: var(--weight-medium); }
    Hero
    ========================================================== */
 .hero { padding: var(--space-11) 0; }
-.hero__inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: var(--space-9); align-items: center; }
+/* Centred hero text */
+.hero__inner { display: grid; grid-template-columns: 1fr; gap: var(--space-9); }
+.hero__content { display: flex; flex-direction: column; align-items: center; text-align: center; }
+.hero__content .lead { margin-inline: auto; }
+.hero__content .hero__actions { justify-content: center; }
 
 /* Reference "AR-9 PLATFORM • REV 04" tag */
 .tag-badge {
@@ -378,7 +382,7 @@ h4 { font-weight: var(--weight-medium); }
 .pill__text { color: var(--fg-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pill__more { color: var(--fg); font-weight: var(--weight-medium); white-space: nowrap; }
 
-.hero__title { margin: var(--space-7) 0 var(--space-6); font-size: var(--hero-size); font-weight: var(--weight-semibold); line-height: 1.05; letter-spacing: -0.03em; }
+.hero__title { margin: var(--space-7) 0 var(--space-6); font-size: var(--hero-size); font-weight: var(--weight-medium); line-height: 1.05; letter-spacing: -0.01em; }
 .hero__content .lead { max-width: 560px; }
 .hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-7); margin-top: var(--space-8); }
 .hero__actions .btn { height: 34px; padding: 0 var(--space-6); font-size: 13px; }
@@ -493,7 +497,7 @@ h4 { font-weight: var(--weight-medium); }
 .statement__text .w { color: var(--line-strong); transition: color var(--duration-slow) var(--ease); }
 .statement__text .w.is-on { color: var(--fg); }
 .statement__text .w--accent.is-on { color: var(--accent); }
-.statement__sub { margin-top: var(--space-7); font-family: var(--font-display); font-size: var(--text-lead); line-height: var(--lh-lead); color: var(--fg-2); }
+.statement__sub { margin-top: var(--space-7); font-family: var(--font-body); font-size: var(--text-lead); line-height: var(--lh-lead); color: var(--fg-2); }
 
 /* ==========================================================
    Sections
@@ -580,7 +584,7 @@ h4 { font-weight: var(--weight-medium); }
 .quote { display: flex; flex-direction: column; gap: var(--space-7); padding: var(--space-7); background: var(--panel); }
 .quote__icon { color: var(--accent); }
 .quote__icon .ico { width: 28px; height: 28px; stroke-width: 1.4; }
-.quote blockquote { flex: 1; font-family: var(--font-display); font-size: var(--text-lead); line-height: var(--lh-lead); color: var(--fg); }
+.quote blockquote { flex: 1; font-family: var(--font-body); font-size: var(--text-lead); line-height: var(--lh-lead); color: var(--fg); }
 .quote figcaption { display: flex; align-items: center; gap: var(--space-4); margin-top: auto; min-height: 84px; padding-top: var(--space-6); border-top: 1px solid var(--line); }
 .quote__avatar { flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
 .quote__who { display: grid; gap: var(--space-2); }

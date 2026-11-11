@@ -14,7 +14,7 @@ export default function HomePage() {
               <div className="hero__content reveal">
                 <div className="tag-badge"><span>Welcome To Sascan</span></div>
 
-                <h1 className="hero__title">Early Detection<br /><span className="accent">Saves Lives.</span></h1>
+                <h1 className="hero__title">Early Detection <span className="accent">Saves Lives.</span></h1>
                 <p className="lead">
                   At Sascan we utilize a multispectral imaging technology platform for multimodal screening
                   and early detection of potentially malignant lesions.
@@ -24,56 +24,6 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Technical drawing figure */}
-              <figure className="drawing reveal" aria-label="OralScan handheld screening device with labelled parts">
-                <div className="drawing__head mono">
-                  <span>Fig. 01 — OralScan device</span>{" "}<span className="live"><span className="live__dot" aria-hidden="true"></span>Live</span>
-                </div>
-                <div className="drawing__canvas device" id="deviceFig">
-                  {/* Fallback line drawing, shown until assets/oralscan.png (transparent cut-out) is added */}
-                  <svg className="device__art" viewBox="0 0 400 300" aria-hidden="true">
-                    <g className="d-line"><path d="M20 40h360M20 260h360M40 20v260M360 20v260" strokeDasharray="2 6" /></g>
-
-                    <circle className="dv-head" cx="120" cy="140" r="62" />
-                    <circle className="dv-bezel" cx="120" cy="140" r="52" />
-                    <g className="dv-led">
-                        <circle cx="164.0" cy="140.0" r="3.2" style={{ "--i": "0" }} />
-                        <circle cx="158.1" cy="162.0" r="3.2" style={{ "--i": "1" }} />
-                        <circle cx="142.0" cy="178.1" r="3.2" style={{ "--i": "2" }} />
-                        <circle cx="120.0" cy="184.0" r="3.2" style={{ "--i": "3" }} />
-                        <circle cx="98.0" cy="178.1" r="3.2" style={{ "--i": "4" }} />
-                        <circle cx="81.9" cy="162.0" r="3.2" style={{ "--i": "5" }} />
-                        <circle cx="76.0" cy="140.0" r="3.2" style={{ "--i": "6" }} />
-                        <circle cx="81.9" cy="118.0" r="3.2" style={{ "--i": "7" }} />
-                        <circle cx="98.0" cy="101.9" r="3.2" style={{ "--i": "8" }} />
-                        <circle cx="120.0" cy="96.0" r="3.2" style={{ "--i": "9" }} />
-                        <circle cx="142.0" cy="101.9" r="3.2" style={{ "--i": "10" }} />
-                        <circle cx="158.1" cy="118.0" r="3.2" style={{ "--i": "11" }} />
-                    </g>
-                    <circle className="dv-sensor" cx="120" cy="140" r="20" />
-                    <circle className="dv-lens" cx="120" cy="140" r="9" />
-
-                    <path className="dv-body" d="M178 120l27 6v28l-27 6z" />
-                    <rect className="dv-body" x="205" y="118" width="170" height="44" rx="22" />
-                    <rect className="dv-screen" x="228" y="126" width="88" height="28" rx="4" />
-                    <polyline className="dv-wave" points="232,140 242,140 247,131 253,149 259,135 264,142 270,140 312,140" />
-                    <circle className="dv-body" cx="346" cy="140" r="7" />
-
-                    <path className="dv-beam" d="M108 156L58 226" />
-                    <g className="dv-target"><circle cx="52" cy="234" r="9" /><path d="M52 221v26M39 234h26" /></g>
-                  </svg>{" "}<img className="device__photo" src="/assets/oralscan.png" alt="OralScan handheld device" />
-                  {/* Callouts (positions are in the 400×300 figure space) */}
-                  <svg className="device__callouts" viewBox="0 0 400 300" aria-hidden="true">
-                    <g className="co"><path className="co-line" d="M142 102L172 48h14" /><circle className="co-dot" cx="142" cy="102" r="2.5" /><text className="co-text" x="190" y="52">Multispectral LED ring</text></g>
-                    <g className="co"><path className="co-line" d="M106 126L90 70H24" /><circle className="co-dot" cx="106" cy="126" r="2.5" /><text className="co-text" x="24" y="63">Imaging sensor</text></g>
-                    <g className="co"><path className="co-line" d="M272 154l12 46h100" /><circle className="co-dot" cx="272" cy="154" r="2.5" /><text className="co-text" x="290" y="193">Real-time display</text></g>
-                    <g className="co co--signal"><path className="co-line" d="M61 240l29 22h110" /><circle className="co-dot" cx="61" cy="240" r="2.5" /><text className="co-text" x="94" y="256">Biopsy guidance</text></g>
-                  </svg>
-                </div>
-                <figcaption className="drawing__foot mono">
-                  <span>Model OS-01</span>{" "}<span>Handheld</span>{" "}<span>Point-of-care</span>
-                </figcaption>
-              </figure>
             </div>
           </section>
 
