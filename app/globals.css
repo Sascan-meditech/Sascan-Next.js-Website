@@ -1,6 +1,15 @@
 /* ==========================================================
-   Sascan — styled after the Armature reference (layout, type, components)
-   Colours are Sascan's own: teal (medical) · indigo (ML/data) · coral (signal)
+   Sascan design system
+   ----------------------------------------------------------
+   House rules (agreed with Sascan, Nov 2026):
+   - Colour: logo blue #0071BC and logo green #8CC63F only, plus neutrals.
+   - Type: IBM Plex Sans for everything. Page titles and section headings
+     share one style (Regular, max 40px); only the home hero is larger.
+   - Shape: square corners on every button, image and form field.
+   - Buttons: compact, no arrow icons.
+   - Surface: light theme on a faint line grid with outer guide lines.
+   Tokens live in :root below; the rules that enforce the house style
+   site-wide are in the "Design system rules" section at the very end.
    ========================================================== */
 :root {
   /* Colour palette — Sascan logo colours only
@@ -41,7 +50,18 @@
   --space-9: 60px;  --space-10: 90px; --space-11: 100px; --space-12: 260px;
   --space-13: 300px;
 
-  /* Shape */
+  /* Headings: one shared style for page titles and section headings */
+  --title-size: clamp(28px, 3vw, 40px);
+  --title-weight: var(--weight-regular);
+  --title-leading: 1.1;
+  --title-tracking: -0.02em;
+  --hero-size: clamp(38px, 4.6vw, 64px);    /* home hero only */
+  --subhead-size: clamp(19px, 1.6vw, 24px); /* small headings inside a section */
+  --statement-size: clamp(22px, 2.2vw, 30px);
+
+  /* Shape: buttons, images and form fields are always square (--radius-ui).
+     The other radii are only for cards, badges and pills. */
+  --radius-ui: 0;
   --radius-full: 4px;
   --radius-6: 6px;
   --radius-7: 10px;
@@ -95,7 +115,7 @@ h1, h2, h3, h4, p, figure, blockquote { margin: 0; }
 ul, ol { margin: 0; padding: 0; list-style: none; }
 
 h1, h2, h3 { font-family: var(--font-display); color: var(--fg); }
-h1 { font-weight: var(--weight-semibold); font-size: clamp(28px, 3vw, var(--text-xl)); line-height: 1.1; letter-spacing: -0.03em; }
+h1 { font-weight: var(--title-weight); font-size: var(--title-size); line-height: var(--title-leading); letter-spacing: var(--title-tracking); }
 h2 { font-weight: var(--weight-medium); font-size: clamp(22px, 2.2vw, var(--text-lg)); line-height: 1.1; letter-spacing: -0.01em; }
 h3 { font-weight: var(--weight-regular); }
 h4 { font-weight: var(--weight-medium); }
@@ -358,7 +378,7 @@ h4 { font-weight: var(--weight-medium); }
 .pill__text { color: var(--fg-2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .pill__more { color: var(--fg); font-weight: var(--weight-medium); white-space: nowrap; }
 
-.hero__title { margin: var(--space-7) 0 var(--space-6); font-size: clamp(38px, 4.6vw, 64px); line-height: 1.05; }
+.hero__title { margin: var(--space-7) 0 var(--space-6); font-size: var(--hero-size); font-weight: var(--weight-semibold); line-height: 1.05; letter-spacing: -0.03em; }
 .hero__content .lead { max-width: 560px; }
 .hero__actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-7); margin-top: var(--space-8); }
 .hero__actions .btn { height: 34px; padding: 0 var(--space-6); font-size: 13px; }
@@ -2277,30 +2297,41 @@ html.demo-open { overflow: hidden; }
 }
 
 /* ==========================================================================
-   Site-wide: minimal heading sizes. Caps every large custom title so headings
-   stay compact everywhere (base h1/h2 sizes come from --text-xl / --text-lg).
+   Design system rules — keep this section LAST in the file.
+   These enforce the house style on top of every component above, so new
+   components only need to add their class to the right list here.
    ========================================================================== */
-/* page titles */
-.sp-title, .ap-title, .ap-title--sm, .ss-title, .jo-title, .ct-hero__title, .tc-head__title,
-.pt-title, .shop-title, .cl-buy__title, .pb-title {
-  font-size: clamp(28px, 3vw, 40px) !important; line-height: 1.1 !important;
+
+/* 1. Headings — page titles and section headings share one style
+      (the Careers "Work With Us" look). Every h1 picks it up from the base
+      h1 rule; the classes below set their own sizes and need pulling back.
+      Not included on purpose: the home hero (.hero__title) and small labels
+      such as department names, "Order summary", "INDIA", publication years. */
+.ab-hero__title, .sp-title, .jo-title, .shop-title, .ct-hero__title, .cl-buy__title, .pb-title, .tc-head__title,
+.ap-title, .ap-title--sm, .ss-title, .pt-title,
+.section__head h2, .ab-sec__head h2, .cta__title, .sp-h2, .os-h2, .ss-h2, .ap-h2, .cl-h2, .pb-h2, .sp-end__title, .ss-cta__title {
+  font-family: var(--font-display) !important;
+  font-size: var(--title-size) !important;
+  font-weight: var(--title-weight) !important;
+  line-height: var(--title-leading) !important;
+  letter-spacing: var(--title-tracking) !important;
 }
-/* section headings */
-.page-hero__title--h2, .os-h2, .ss-h2, .sp-h2, .ap-h2, .ap-statement, .ap-statement--left,
-.ss-cta__title, .statement__text {
-  font-size: clamp(22px, 2.2vw, 30px) !important; line-height: 1.2 !important;
+.pb-h2--one { white-space: normal !important; } /* long heading may wrap at title size */
+
+/* Statements and small in-section headings stay smaller than titles */
+.page-hero__title--h2, .ap-statement, .ap-statement--left, .statement__text {
+  font-size: var(--statement-size) !important; line-height: 1.2 !important;
 }
-/* sub-section headings */
-.openings__title, .sp-end__title, .pb-h2, .cl-h2, .jo-dept__name, .shop-empty__title {
-  font-size: clamp(19px, 1.6vw, 24px) !important; line-height: 1.25 !important;
+.openings__title, .jo-dept__name, .shop-empty__title {
+  font-size: var(--subhead-size) !important; line-height: 1.25 !important;
 }
 .jo-role__title { font-size: clamp(17px, 1.4vw, 20px) !important; }
 
-/* ==========================================================================
-   Site-wide: square (non-rounded) buttons everywhere.
-   Overrides every earlier border-radius on buttons, tabs, chips that act as
-   buttons, icon buttons and button-like links. Cards and images keep theirs.
-   ========================================================================== */
+/* 2. Square corners — every button, image and form field (and the frames,
+      cards and panels that clip them). Badges, pills and text-only cards
+      keep their own radius. */
+
+/* buttons, tabs, icon buttons and button-like links */
 button,
 input[type="submit"], input[type="button"], input[type="reset"],
 [role="button"], [role="tab"],
@@ -2309,51 +2340,23 @@ input[type="submit"], input[type="button"], input[type="reset"],
 .demo__send, .demo__close, .icon-btn, .menu-toggle, .nav__caret,
 .pt-tabs, .pt-tab, .pt-tabs__ink, .cl-tabs__list, .cl-tab, .ct-tab, .aw-chip,
 .pb-gallery__arrow, .coupon__toggle, .cl-qty, .cl-qty--sm, .cl-card__cta, .mega__cta,
-.socials a, .skip-link, .ct-form__send {
-  border-radius: 0 !important;
-}
+.socials a, .skip-link, .ct-form__send,
 
-/* ==========================================================================
-   Site-wide: square (non-rounded) images and image frames everywhere.
-   Covers every image, video, embed and figure, plus the boxes / cards whose
-   rounded corners clip an image (found by scanning every page).
-   ========================================================================== */
+/* images, media and the frames / cards that clip them */
 img, video, iframe, picture, figure, svg image,
 .mega__feature, .mega__feature--product,
 .quote__avatar, .ab-photo, .ab-certrow__logo, .pt-card, .pt-card--person, .aw-card,
 .cart-item__img, .cl-gallery__stage, .cl-gallery__thumb, .cl-card, .mm-shot,
 .os-event__img, .pb-gallery__stage, .pb-video, .pb-vcard, .ml__float, .ml__thumb,
 .vl-hero, .ct-place__photo, .product__media, .drawing, .layers__figure, .map,
-.post__media, .post__img, .partner-logo, .team__photo, .tm-card, .sum__img {
-  border-radius: 0 !important;
-}
+.post__media, .post__img, .partner-logo, .team__photo, .tm-card, .sum__img,
 
-/* ==========================================================================
-   Site-wide: square (non-rounded) forms. Every text box, dropdown, message
-   box and form card / panel uses straight corners.
-   ========================================================================== */
+/* form fields and the cards / panels that hold forms */
 input:not([type="radio"]), select, textarea,
 .newsletter, .ct-formbox, .ct-field input, .ct-field select, .ct-field textarea,
 .ap-phone__code, .ap-phone input, .ap-file, .ap-file__btn,
 .co-card, .co-field input, .co-field select, .co-field textarea, .co-prefix, .co-msg,
 .coupon__row, .coupon__row input, .coupon__tag, .sum, .cart-list,
 .demo, .demo__panel, .demo__field input, .demo__field select, .demo__field textarea {
-  border-radius: 0 !important;
+  border-radius: var(--radius-ui) !important;
 }
-
-/* ==========================================================================
-   Site-wide: one heading style for page titles and section headings,
-   matching the Careers "Work With Us" title (IBM Plex Sans Regular, max 40px).
-   The home hero title keeps its own larger size; small labels (department
-   names, order summary, INDIA, publication years) are left as they are.
-   ========================================================================== */
-main h1:not(.hero__title),
-.ab-hero__title, .sp-title, .jo-title, .shop-title, .ct-hero__title, .cl-buy__title, .pb-title, .tc-head__title,
-.section__head h2, .ab-sec__head h2, .cta__title, .sp-h2, .os-h2, .ss-h2, .ap-h2, .cl-h2, .pb-h2, .sp-end__title, .ss-cta__title {
-  font-family: var(--font-display) !important;
-  font-size: clamp(28px, 3vw, 40px) !important;
-  font-weight: var(--weight-regular) !important;
-  line-height: 1.1 !important;
-  letter-spacing: -0.02em !important;
-}
-.pb-h2--one { white-space: normal !important; } /* long heading may wrap at the larger size */

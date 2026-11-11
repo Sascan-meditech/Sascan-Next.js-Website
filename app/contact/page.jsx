@@ -41,7 +41,7 @@ const CARDS = [
 export default function ContactPage() {
   return (
     <>
-      <Header />
+      <Header active="contact" />
       <main id="main">
         {/* Hero: heading on the left, tabbed form on the right */}
         <section className="ct-hero" id="overview">

@@ -2,7 +2,7 @@ import Link from "next/link";
 import CartButton from "./shop/CartButton";
 
 /* Site header with the Company / Technology / Products mega menus.
-   `active` highlights the current top-level section: home | company | technology | products | resources | shop */
+   `active` highlights the current top-level section: home | company | technology | products | resources | shop | contact */
 export default function Header({ active }) {
   const linkClass = (key) => (active === key ? 'nav__link is-active' : 'nav__link');
   return (
@@ -30,7 +30,7 @@ export default function Header({ active }) {
                     <li><Link href="/careers" className="nav__sublink"><span className="nav__subicon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18" /></svg></span><span className="nav__subtext"><span className="nav__subtitle">Careers</span><span className="nav__subdesc">Open roles in engineering and design.</span></span></Link></li>
                   </ul>
                   <Link className="mega__feature" href="/about">
-                    <img src="/assets/sascan-award.webp" alt="Sascan team receiving an award" loading="lazy" decoding="async" />{" "}<span className="mega__caption">Revolutionizing cancer screening with biophotonics.</span>{" "}<span className="mega__cta">About Sascan <svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+                    <img src="/assets/sascan-award.webp" alt="Sascan team receiving an award" loading="lazy" decoding="async" />{" "}<span className="mega__caption">Revolutionizing cancer screening with biophotonics.</span>{" "}<span className="mega__cta">About Sascan</span>
                   </Link>
                 </div>
               </li>
@@ -63,7 +63,7 @@ export default function Header({ active }) {
                     <li><Link href="/vaguslite" className="nav__sublink"><span className="nav__subicon"><svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18" /><path d="M12 7c-3 0-5 2-5 4M12 11c3 0 5 2 5 4M12 15c-2.5 0-4 1.5-4 3" /></svg></span><span className="nav__subtext"><span className="nav__subtitle">VagusLite</span><span className="nav__subdesc">PBM based vagus nerve stimulation device for gut health and mood disorders.</span></span></Link></li>
                   </ul>
                   <Link className="mega__feature mega__feature--product" href="/oralscan">
-                    <img src="/assets/oralscan/oralscan-kit-laptop.webp" alt="OralScan kit with laptop running the OralScan software" loading="lazy" decoding="async" />{" "}<span className="mega__caption">Detect Early. Heal Better.</span>{" "}<span className="mega__cta">Explore OralScan <svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+                    <img src="/assets/oralscan/oralscan-kit-laptop.webp" alt="OralScan kit with laptop running the OralScan software" loading="lazy" decoding="async" />{" "}<span className="mega__caption">Detect Early. Heal Better.</span>{" "}<span className="mega__cta">Explore OralScan</span>
                   </Link>
                 </div>
               </li>
@@ -81,7 +81,7 @@ export default function Header({ active }) {
                   </ul>
                   <a className="mega__feature mega__feature--tech mega__feature--support" href="https://wa.me/919446697551" target="_blank" rel="noopener">
                     <span className="mega__caption">Need assistance? Our support team is here to help - contact us!</span>
-                    <span className="mega__cta">WhatsApp Support <svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+                    <span className="mega__cta">WhatsApp Support</span>
                   </a>
                 </div>
               </li>
@@ -99,18 +99,18 @@ export default function Header({ active }) {
                   </ul>
                   <a className="mega__feature mega__feature--tech mega__feature--support" href="https://wa.me/919446697551" target="_blank" rel="noopener">
                     <span className="mega__caption">Need assistance? Our support team is here to help - contact us!</span>
-                    <span className="mega__cta">WhatsApp Support <svg className="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></span>
+                    <span className="mega__cta">WhatsApp Support</span>
                   </a>
                 </div>
               </li>
             </ul>
             <div className="nav__mobile-actions">
-              <a href="#" className="btn btn--secondary">Login</a>{" "}<Link href="/contact" className="btn btn--secondary">Contact us</Link>
+              <a href="http://sascanonline.com/" className="btn btn--secondary" target="_blank" rel="noopener">Login</a>{" "}<Link href="/contact" className="btn btn--secondary">Contact us</Link>
             </div>
           </nav>
 
           <div className="header__actions">
-            {" "}<a href="#" className="header__link">Login</a>{" "}<CartButton />{" "}<Link href="/contact" className="btn btn--secondary header__cta">Contact us</Link>{" "}<button className="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+            {" "}<a href="http://sascanonline.com/" className="header__link" target="_blank" rel="noopener">Login</a>{" "}<CartButton />{" "}<Link href="/contact" className="btn btn--secondary header__cta" aria-current={active === "contact" ? "page" : undefined}>Contact us</Link>{" "}<button className="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
               <span></span><span></span><span></span>
             </button>
           </div>

@@ -20,7 +20,7 @@ const Chevron = () => (
 export default function CareersPage() {
   return (
     <>
-      <Header />
+      <Header active="company" />
       <main id="main">
         <section className="jo-hero">
           <div className="container jo-wrap reveal">
