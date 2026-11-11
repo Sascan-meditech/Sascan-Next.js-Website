@@ -59,9 +59,10 @@
   --subhead-size: clamp(19px, 1.6vw, 24px); /* small headings inside a section */
   --statement-size: clamp(22px, 2.2vw, 30px);
 
-  /* Shape: buttons, images and form fields are always square (--radius-ui).
+  /* Shape: images and form fields are square (--radius-ui); buttons are slightly rounded (--radius-btn).
      The other radii are only for cards, badges and pills. */
   --radius-ui: 0;
+  --radius-btn: 6px;
   --radius-full: 4px;
   --radius-6: 6px;
   --radius-7: 10px;
@@ -2364,3 +2365,28 @@ input:not([type="radio"]), select, textarea,
 .demo, .demo__panel, .demo__field input, .demo__field select, .demo__field textarea {
   border-radius: var(--radius-ui) !important;
 }
+
+/* 3. Buttons — slightly rounded corners, compact size, normal-case text (no all-caps).
+      Overrides the square rule above for button-like elements only. */
+button,
+input[type="submit"], input[type="button"], input[type="reset"],
+[role="button"],
+.btn, .btn--hook::before, .btn--hook::after,
+.os-btn, .ap-btn--solid, .shop-btn, .cl-cart__btn, .cl-buynow, .coupon__apply,
+.demo__send, .icon-btn, .menu-toggle, .nav__caret,
+.pb-gallery__arrow, .coupon__toggle, .ct-form__send, .ap-file__btn, .skip-link {
+  border-radius: var(--radius-btn) !important;
+}
+.btn, .text-link, .demo__send, .os-btn, .ap-btn, .ap-btn--solid, .ct-form__send, .jo-role__apply, .ap-file__btn {
+  text-transform: none !important; letter-spacing: 0 !important;
+}
+.btn { height: 36px; padding: 0 16px; font-size: 14px; }
+.btn--icon { width: 36px; padding: 0; }
+.hero__actions .btn { height: 36px; padding: 0 16px; font-size: 14px; }
+.hero__actions .text-link, .text-link { font-size: 14px; }
+.shop-btn, .cl-cart__btn, .cl-buynow { height: 42px; font-size: 14px; }
+.coupon__apply { height: 38px; padding: 0 14px; }
+.demo__send { height: 44px; }
+.ct-form__send { height: 40px; min-width: 140px; }
+.os-btn { padding: 9px 18px; font-size: 14px; }
+.ap-btn--solid { padding: 9px 20px; font-size: 15px; }
